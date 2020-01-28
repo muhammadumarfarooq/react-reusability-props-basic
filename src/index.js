@@ -1,12 +1,57 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import UserList from "./UserList";
+import ApprovalCard from "./ApprovalCard";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function App() {
+  return (
+    <div>
+      <ApprovalCard>
+        <UserList name='Umar' />
+      </ApprovalCard>
+      <ApprovalCard>
+        <UserList name='Hassan' />
+      </ApprovalCard>
+      <ApprovalCard>
+        <UserList name='Umair' />
+      </ApprovalCard>
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.querySelector("#root"));
+
+// How to create a reusable component:
+
+// examine the JSX that is repeating.
+// make a file and give it a meaningful name
+/**
+ So Far......
+  How to generate a React js project 
+  all files delete... and make new files in src
+  first component ....
+  Js inside {} brackets....
+  Components ==> reuse, nest, configure
+  Component Tenets
+  reusability
+  nesting 
+  configuration 
+
+  ====> We will make a simple application that will be used to understand all these concepts.
+  First I follow the neive approach then i will make components of it.
+  here we will use component nesting, Component Reuse and also configure the componet to show different data using props.
+  
+
+  When and How to make a component?
+  see repeated JSX.
+  think its name !!!very imp.
+  make a new file and make a component and add the code.
+
+ */
+
+/*
+
+
+
+*/
